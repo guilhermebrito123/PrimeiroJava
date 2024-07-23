@@ -4,7 +4,7 @@
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
     width: 100%; /* Define a largura do contêiner */
-    height: 100vh; /* Define a altura do contêiner, ajustável conforme necessário */
+    height: 911px; /* Define a altura do contêiner, ajustável conforme necessário */
     position: relative; /* Permite sobreposição de elementos, se necessário */
 }
 
@@ -29,4 +29,3 @@ li {
 .container {
     z-index: 1;
 }
-
