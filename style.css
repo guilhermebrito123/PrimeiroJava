@@ -29,3 +29,8 @@ li {
 .container {
     z-index: 1;
 }
+
+.h300 {
+    max-height: 450px;  
+    font-family: fantasy;
+}

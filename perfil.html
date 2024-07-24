@@ -21,21 +21,92 @@
             if (nome) {
                 document.getElementById("nome").textContent = nome;
             }
-            let Clan = localStorage.getItem("clan");
-            if (Clan) {
-                document.getElementById("clan").textContent = Clan;
+            let Cla = localStorage.getItem("cla");
+            if (Cla) {
+                document.getElementById("cla").textContent = Cla;
             }
         });
     </script>
 
 <div class="background-image">
+    <nav class="navbar bg-body-trasparent">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler position-absolute top-0 start-0 mt-3 ms-3" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start bg-transparent" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" aria-current="page" href="#">
+                                Conheça-nos </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="perfil.html">Perfil</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu bg-transparent">
+                                <li><a class="dropdown-item text-light" style="background-color: rgb(50, 22, 211);"
+                                        href="#">Action</a></li>
+                                <li><a class="dropdown-item text-light" style="background-color: rgb(50, 22, 211);"
+                                        href="#">Another action</a></li>
+                                <li><a class="dropdown-item text-light" style="background-color: rgb(50, 22, 211);"
+                                        href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-light btn-outline-primary" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
     <br><br><br>
-    <div class="card col-xxl-5 m-xxl-auto col-xl-5 m-xl-auto col-lg-6 m-lg-auto col-md-6 m-md-auto col-sm-8 m-sm-auto col-10 m-auto" style="width: 18rem;">
+    <div class="card col-xxl-6 mx-xxl-auto mt-xxl-1 col-xl-6 mx-xl-auto mt-xl-1 col-lg-6 mx-lg-auto mt-lg-1 col-md-6 mx-md-auto mt-md-1 
+    col-sm-8 mx-sm-auto mt-sm-1 col-10 mt-5 mx-auto" style="width: 18rem;">
         <ul class="list-group list-group-flush">
             <li class="list-group-item text-center fs-3" style="font-family: fantasy;">Seus dados: </li>
             <li class="list-group-item text-center">Seu nome - <span id="nome"></span></li>
             <li class="list-group-item text-center">Seu clan - <span id="clan"></span></li>
         </ul>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Infos pessoais</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Somos da família Wasabi, seja bem vindo ao clan!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
