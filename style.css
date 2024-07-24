@@ -34,3 +34,8 @@ li {
     max-height: 450px;  
     font-family: fantasy;
 }
+
+img {
+    max-width: 40px;
+    max-height: 40px;
+}
