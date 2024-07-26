@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -13,6 +14,7 @@
         crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
+
 <body>
     <nav class="navbar bg-body-trasparent">
         <div class="container-fluid">
@@ -33,15 +35,15 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active text-light" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal" aria-current="page" href="#">
+                            <a class="nav-link active text-light" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                aria-current="page" href="#">
                                 Conheça-nos </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active text-light" aria-current="page" href="/index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="perfil.html">Perfil</a>
+                            <a class="nav-link text-light" href="/perfil.html">Perfil</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light" href="#" role="button"
@@ -49,28 +51,27 @@
                                 Dropdown
                             </a>
                             <ul class="dropdown-menu bg-transparent">
-                                <li><a class="dropdown-item text-light" style="background-color: rgb(50, 22, 211, 0.5);"
-                                        href="form.html">Formulário</a></li>
-                                <li><a class="dropdown-item text-light" style="background-color: rgb(50, 22, 211, 0.5);"
-                                        href="#">Another action</a></li>
-                                <li><a class="dropdown-item text-light" style="background-color: rgb(50, 22, 211, 0.5);"
-                                        href="#">Something else here</a></li>
+                                <li><a class="dropdown-item text-light" href="form.html">Formulário</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Another action</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
                             </ul>
                         </li>
                         <ul class="list-inline">
                             <li class="nav-item list-inline-item">
-                                <a class="nav-link text-light bi-instagram list-inline-item me-2" href="https://www.instagram.com/" role="button"
-                                    data-bs-toggle="" aria-expanded="false">
+                                <a class="nav-link text-light bi-instagram list-inline-item me-2"
+                                    href="https://www.instagram.com/" role="button" data-bs-toggle=""
+                                    aria-expanded="false">
                                 </a>
                             </li>
                             <li class="nav-item list-inline-item">
-                                <a class="nav-link text-light bi-twitter-x list-inline-item me-2" href="https://x.com/home" role="button"
-                                    data-bs-toggle="" aria-expanded="false">
+                                <a class="nav-link text-light bi-twitter-x list-inline-item me-2"
+                                    href="https://x.com/home" role="button" data-bs-toggle="" aria-expanded="false">
                                 </a>
                             </li>
                             <li class="nav-item list-inline-item">
-                                <a class="nav-link text-light bi-whatsapp list-inline-item me-2" href="https://web.whatsapp.com/" role="button"
-                                    data-bs-toggle="" aria-expanded="false">
+                                <a class="nav-link text-light bi-whatsapp list-inline-item me-2"
+                                    href="https://web.whatsapp.com/" role="button" data-bs-toggle=""
+                                    aria-expanded="false">
                                 </a>
                             </li>
                         </ul>
@@ -102,22 +103,60 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="mt-5 mb-3 form-floating">
-            <input type="email" name="" id="email" class="form-control" placeholder=" ">
-            <label for="email" class="label-form">Email</label>
-        </div>
-        <div class="mb-3 form-floating">
-            <input type="text" name="" id="number" class="form-control" placeholder=" ">
-            <label for="number" class="label-form">Telefone</label>
-        </div>
-        <div class="mb-3 form-floating">
-            <input type="text" name="" id="cpf" class="form-control" placeholder=" ">
-            <label for="cpf" class="label-form">CPF</label>
+    <div
+        class="p-1 col-8 my-5 mx-auto col-sm-7 mx-sm-auto col-md-6 m-sm-auto col-lg-6 m-lg-auto col-xl-5 m-xl-auto display-6 text-center bg-light border border-warning border-3 rounded-3 shadow-md">
+        Informações Pessoais</div>
+
+    <div class="container-md">
+        <div class="row">
+            <div class="col-sm-10 mx-sm-auto col-md-7 mx-md-auto col-lg-6 ms-lg-1 col-xl-6 mx-xl-1">
+                <div class="mt-5 mb-3 form-floating border border-warning border-3">
+                    <input type="email" name="" id="email" class="form-control" placeholder=" ">
+                    <label for="email" class="label-form">Email</label>
+                </div>
+                <div class="mb-3 form-floating border border-warning border-3">
+                    <input type="text" name="" id="number" class="form-control" placeholder=" ">
+                    <label for="number" class="label-form">Telefone</label>
+                </div>
+                <div class="mb-3 form-floating border border-warning border-3">
+                    <input type="text" name="" id="cpf" class="form-control" placeholder=" ">
+                    <label for="cpf" class="label-form">CPF</label>
+                </div>
+                <form>
+                    <div class="row mb-3 g-3">
+                        <div class="col-sm-10 ms-sm-0 col-md-8 ms-md-0 col-lg-7 ms-lg-0">
+                            <label for="logradouro" class="form-label text-light">Logradouro:</label>
+                            <input type="text" id="logradouro" class="form-control border border-warning border-3">
+                        </div>
+                        <div class="col-2 text-center col-sm-2 col-md-2 col-lg-1">
+                            <label for="number" class="form-label text-light">Nº:</label>
+                            <input type="text" id="number" class="form-control border border-warning border-3">
+                        </div>
+                        <div class="col-4">
+                            <label for="" class="form-label text-light">Cidade:</label>
+                            <input type="text" list="cidade" class="form-control border border-warning border-3">
+                            <datalist id="cidade">
+                                <option value="Cidade1"></option>
+                                <option value="Cidade2"></option>
+                                <option value="Cidade3"></option>
+                                <option value="Cidade4"></option>
+                                <option value="Cidade5"></option>
+                                <option value="Cidade6"></option>
+                                <option value="Cidade7"></option>
+                            </datalist>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <img src="/img/user.png" alt=""
+                class="img-fluid rounded-circle p-4 bg-warning col-4 mx-auto mt-4 mx-sm-auto mx-md-auto mx-lg-auto mx-xl-auto"
+                style="max-height: 400px!important;">
         </div>
     </div>
+
 
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
