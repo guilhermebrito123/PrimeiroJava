@@ -104,29 +104,29 @@
     </div>
 
     <div
-        class="p-1 col-8 my-5 mx-auto col-sm-7 mx-sm-auto col-md-6 m-sm-auto col-lg-6 m-lg-auto col-xl-5 m-xl-auto display-6 text-center bg-light border border-warning border-3 rounded-3 shadow-md">
+        class="p-1 col-8 my-5 mx-auto col-sm-7 mx-sm-auto col-md-6 m-sm-auto col-lg-6 m-lg-auto col-xl-5 m-xl-auto display-6 text-center border-3 rounded-3 shadow-md text-light">
         Informações Pessoais</div>
 
     <div class="container-md">
         <div class="row">
             <div class="col-sm-10 mx-sm-auto col-md-7 mx-md-auto col-lg-6 ms-lg-1 col-xl-6 mx-xl-1">
-                <form action="/sobrevc/sobrevc.html" method="post" class="needs-validation" novalidate>
+                <form action="/sobrevc/sobrevc.html" method="get" class="needs-validation" novalidate>
                     <div class="mt-5 mb-3 form-floating">
-                        <input type="email" name="" id="email" class="form-control border border-warning border-3"
+                        <input type="email" name="" id="email" class="form-control border border-light border-3"
                             placeholder=" " required>
                         <label for="email" class="label-form">Email</label>
                         <div class="invalid-feedback text-light">Você deve informar o Email</div>
                         <div class="valid-feedback text-light">Email válido</div>
                     </div>
                     <div class="mb-3 form-floating">
-                        <input type="text" name="" id="phone" class="form-control border border-warning border-3"
+                        <input type="text" name="" id="phone" class="form-control border border-light border-3"
                             placeholder=" " pattern="[0-9]{8}" required>
                         <label for="phone" class="label-form">Telefone</label>
                         <div class="invalid-feedback text-light">Você deve informar o Telefone</div>
                         <div class="valid-feedback text-light">Telefone válido</div>
                     </div>
                     <div class="mb-3 form-floating">
-                        <input type="text" name="" id="cpf" class="form-control border border-warning border-3"
+                        <input type="text" name="" id="cpf" class="form-control border border-light border-3"
                             placeholder=" " pattern="[0-9]{8}" required>
                         <label for="cpf" class="label-form">CPF</label>
                         <div class="invalid-feedback text-light">Você deve informar o CPF</div>
@@ -136,17 +136,17 @@
                     <div class="row mb-3 g-2">
                         <div class="col-sm-10 ms-sm-0 col-md-8 ms-md-0 col-lg-7 ms-lg-0">
                             <label for="logradouro" class="form-label text-light">Logradouro:</label>
-                            <input type="text" id="logradouro" class="form-control border border-warning border-3" required>
+                            <input type="text" id="logradouro" class="form-control border border-light border-3" required>
                             <div class="invalid-feedback text-light">Você deve informar o logradouro</div>
                             <div class="valid-feedback text-light">Logradouro válido</div>
                         </div>
                         <div class="col-2 text-center col-sm-2 col-md-2 col-lg-2">
                             <label for="number" class="form-label text-light">Nº:</label>
-                            <input type="text" id="number" class="form-control border border-warning border-3" pattern="[0-9]{4}" required>
+                            <input type="text" id="number" class="form-control border border-light border-3" pattern="[0-9]{4}" required>
                         </div>
                         <div class="col-3">
                             <label for="" class="form-label text-light">Cidade:</label>
-                            <input type="text" list="cidade" class="form-control border border-warning border-3" required>                            
+                            <input type="text" list="cidade" class="form-control border border-light border-3" required>                            
                             <datalist id="cidade">
                                 <option value="Cidade1"></option>
                                 <option value="Cidade2"></option>
