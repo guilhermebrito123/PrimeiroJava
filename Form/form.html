@@ -110,31 +110,43 @@
     <div class="container-md">
         <div class="row">
             <div class="col-sm-10 mx-sm-auto col-md-7 mx-md-auto col-lg-6 ms-lg-1 col-xl-6 mx-xl-1">
-                <div class="mt-5 mb-3 form-floating border border-warning border-3">
-                    <input type="email" name="" id="email" class="form-control" placeholder=" ">
-                    <label for="email" class="label-form">Email</label>
-                </div>
-                <div class="mb-3 form-floating border border-warning border-3">
-                    <input type="text" name="" id="number" class="form-control" placeholder=" ">
-                    <label for="number" class="label-form">Telefone</label>
-                </div>
-                <div class="mb-3 form-floating border border-warning border-3">
-                    <input type="text" name="" id="cpf" class="form-control" placeholder=" ">
-                    <label for="cpf" class="label-form">CPF</label>
-                </div>
-                <form>
-                    <div class="row mb-3 g-3">
+                <form method="post" class="needs-validation" novalidate>
+                    <div class="mt-5 mb-3 form-floating">
+                        <input type="email" name="" id="email" class="form-control border border-warning border-3"
+                            placeholder=" " required>
+                        <label for="email" class="label-form">Email</label>
+                        <div class="invalid-feedback text-light">Você deve informar o Email</div>
+                        <div class="valid-feedback text-light">Email válido</div>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <input type="text" name="" id="phone" class="form-control border border-warning border-3"
+                            placeholder=" " pattern="[0-9]{8}" required>
+                        <label for="phone" class="label-form">Telefone</label>
+                        <div class="invalid-feedback text-light">Você deve informar o Telefone</div>
+                        <div class="valid-feedback text-light">Telefone válido</div>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <input type="text" name="" id="cpf" class="form-control border border-warning border-3"
+                            placeholder=" " pattern="[0-9]{8}" required>
+                        <label for="cpf" class="label-form">CPF</label>
+                        <div class="invalid-feedback text-light">Você deve informar o CPF</div>
+                        <div class="valid-feedback text-light">CPF válido</div>
+                    </div>
+                    <hr style="color: white;">
+                    <div class="row mb-3 g-2">
                         <div class="col-sm-10 ms-sm-0 col-md-8 ms-md-0 col-lg-7 ms-lg-0">
                             <label for="logradouro" class="form-label text-light">Logradouro:</label>
-                            <input type="text" id="logradouro" class="form-control border border-warning border-3">
+                            <input type="text" id="logradouro" class="form-control border border-warning border-3" required>
+                            <div class="invalid-feedback text-light">Você deve informar o logradouro</div>
+                            <div class="valid-feedback text-light">Logradouro válido</div>
                         </div>
-                        <div class="col-2 text-center col-sm-2 col-md-2 col-lg-1">
+                        <div class="col-2 text-center col-sm-2 col-md-2 col-lg-2">
                             <label for="number" class="form-label text-light">Nº:</label>
-                            <input type="text" id="number" class="form-control border border-warning border-3">
+                            <input type="text" id="number" class="form-control border border-warning border-3" pattern="[0-9]{4}" required>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             <label for="" class="form-label text-light">Cidade:</label>
-                            <input type="text" list="cidade" class="form-control border border-warning border-3">
+                            <input type="text" list="cidade" class="form-control border border-warning border-3" required>                            
                             <datalist id="cidade">
                                 <option value="Cidade1"></option>
                                 <option value="Cidade2"></option>
@@ -144,16 +156,38 @@
                                 <option value="Cidade6"></option>
                                 <option value="Cidade7"></option>
                             </datalist>
+                            <div class="invalid-feedback text-light">Você deve informar a cidade</div>
+                            <div class="valid-feedback text-light">Cidade válida</div>
                         </div>
                     </div>
+                    <button type="submit" class="btn btn-outline-primary text-light">Cadastrar</button>
                 </form>
+
             </div>
             <img src="/img/user.png" alt=""
                 class="img-fluid rounded-circle p-4 bg-warning col-4 mx-auto mt-4 mx-sm-auto mx-md-auto mx-lg-auto mx-xl-auto"
                 style="max-height: 400px!important;">
         </div>
+
+    </div>
     </div>
 
+    <script>(() => {
+        'use strict'
+
+        const forms = document.querySelectorAll('.needs-validation')
+
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()</script>
 
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
