@@ -111,27 +111,45 @@
         <div class="row">
             <div class="col-sm-10 mx-sm-auto col-md-7 mx-md-auto col-lg-6 ms-lg-1 col-xl-6 mx-xl-1">
                 <form action="/sobrevc/sobrevc.html" method="get" class="needs-validation" novalidate>
-                    <div class="mt-5 mb-3 form-floating">
+                    <div class="mt-5 mb-auto form-floating">
                         <input type="email" name="" id="email" class="form-control border border-light border-3"
                             placeholder=" " required>
                         <label for="email" class="label-form">Email</label>
                         <div class="invalid-feedback text-light">Você deve informar o Email</div>
                         <div class="valid-feedback text-light">Email válido</div>
+                            <i class="bi-info-circle" data-bs-toggle="collapse" data-bs-target="#alerta" style="color: white;">
+                                <div class="collapse" id="alerta">
+                                    <p>O email deve conter, necessariamente, o @ e letras</p>
+                                </div>
+                            </i>
                     </div>
-                    <div class="mb-3 form-floating">
+                    <br>
+                    <div class="mb-auto form-floating">
                         <input type="text" name="" id="phone" class="form-control border border-light border-3"
                             placeholder=" " pattern="[0-9]{8}" required>
                         <label for="phone" class="label-form">Telefone</label>
                         <div class="invalid-feedback text-light">Você deve informar o Telefone</div>
                         <div class="valid-feedback text-light">Telefone válido</div>
+                            <i class="bi-info-circle dropdown" data-bs-toggle="collapse" data-bs-target="#alerta2" style="color: white;">
+                                <div class="collapse" id="alerta2">
+                                    <p>O telefone deve conter apenas números</p>
+                                </div>
+                            </i>
                     </div>
-                    <div class="mb-3 form-floating">
+                    <br>
+                    <div class="mb-auto form-floating">
                         <input type="text" name="" id="cpf" class="form-control border border-light border-3"
                             placeholder=" " pattern="[0-9]{8}" required>
                         <label for="cpf" class="label-form">CPF</label>
                         <div class="invalid-feedback text-light">Você deve informar o CPF</div>
                         <div class="valid-feedback text-light">CPF válido</div>
+                            <i class="bi-info-circle" data-bs-toggle="collapse" data-bs-target="#alerta3" style="color: white;">
+                                <div class="collapse" id="alerta3">
+                                    <p>O CPF deve conter apenas números com um traço como antipenúltimo caracter</p>
+                                </div>
+                            </i>
                     </div>
+                    <br>
                     <hr style="color: white;">
                     <div class="row mb-3 g-2">
                         <div class="col-sm-10 ms-sm-0 col-md-8 ms-md-0 col-lg-7 ms-lg-0">
@@ -170,7 +188,12 @@
         </div>
 
     </div>
+
     </div>
+
+    <footer class="p-3 text-light text-center fixed-bottom" style="background-color: #2604a1;">@Todos os direitos reservados</footer>
+
+    <div d-block style="height: 56px"></div>
 
     <script>(() => {
         'use strict'
