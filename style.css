@@ -1,12 +1,7 @@
-.background-image {
-    background-image: url(img/salaninja_edited2.jpg);
-    background-size: cover;
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
-    width: 100%; /* Define a largura do contêiner */
-    height: 911px; /* Define a altura do contêiner, ajustável conforme necessário */
-    position: relative; /* Permite sobreposição de elementos, se necessário */
+body {
+    background: linear-gradient(to right, #2c05b9 0%, #401cc5 50%, #5338b6 100%);
 }
+
 
 li {
     margin-right: 5px;

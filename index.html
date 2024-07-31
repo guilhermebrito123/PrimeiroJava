@@ -17,17 +17,6 @@
 
 <body>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let nome = window.prompt("Qual é o seu nome?");
-            localStorage.setItem("nome", nome);
-            let Cla = window.prompt("Qual é o seu clã?");
-            localStorage.setItem("cla", Cla);
-        });
-    </script>
-
-    <div class="background-image">
-
         <nav class="navbar bg-body-trasparent">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"></a>
@@ -55,7 +44,7 @@
                                 <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="perfil.html">Perfil</a>
+                                <a class="nav-link text-light" href="/sobrevc/sobrevc.html">Sobre você</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-light" href="#" role="button"
@@ -63,11 +52,11 @@
                                     Dropdown
                                 </a>
                                 <ul class="dropdown-menu bg-transparent">
-                                    <li><a class="dropdown-item text-light" style="background-color: rgb(50, 22, 211, 0.5);"
+                                    <li><a class="dropdown-item text-light"
                                             href="/Form/form.html">Formulário</a></li>
-                                    <li><a class="dropdown-item text-light" style="background-color: rgb(50, 22, 211, 0.5);"
+                                    <li><a class="dropdown-item text-light"
                                             href="#">Another action</a></li>
-                                    <li><a class="dropdown-item text-light" style="background-color: rgb(50, 22, 211, 0.5);"
+                                    <li><a class="dropdown-item text-light"
                                             href="#">Something else here</a></li>
                                 </ul>
                             </li>
@@ -114,7 +103,7 @@
                     style="background-color:  rgb(50, 22, 211, 0.5);">
                     <figure class="text-end">
                         <blockquote class="blockquote" cite="Madara Uchiha">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ea, velit molestiae nesciunt
+                            Seja bem vindo <span id="name"></span>! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ea, velit molestiae nesciunt
                             facilis
                             architecto! Deserunt quia voluptatibus itaque ab ducimus suscipit totam, cumque at ea quae
                             eaque
@@ -172,9 +161,12 @@
             </div>
         </div>
 
-    </div>
+
+        <footer class="p-3 fixed-bottom text-center text-light" style="background-color: #2604a1;">@Todos os direitos reservados</footer>
+        <div d-block style="height: 56px"></div>
 
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer></script>
 
 </body>
 

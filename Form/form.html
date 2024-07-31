@@ -43,7 +43,7 @@
                             <a class="nav-link active text-light" aria-current="page" href="/index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="/perfil.html">Perfil</a>
+                            <a class="nav-link text-light" href="/sobrevc/sobrevc.html">Sobre você</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light" href="#" role="button"
@@ -157,10 +157,22 @@
                             <input type="text" id="logradouro" class="form-control border border-light border-3" required>
                             <div class="invalid-feedback text-light">Você deve informar o logradouro</div>
                             <div class="valid-feedback text-light">Logradouro válido</div>
+                            <i class="bi-info-circle" data-bs-toggle="collapse" data-bs-target="#alerta4" style="color: white;">
+                                <div class="collapse" id="alerta4">
+                                    <p>Informe o nome da rua e do bairro onde mora atualmente</p>
+                                </div>
+                            </i>
                         </div>
-                        <div class="col-2 text-center col-sm-2 col-md-2 col-lg-2">
+                        <div class="col-2 col-sm-2 col-md-2 col-lg-2">
                             <label for="number" class="form-label text-light">Nº:</label>
                             <input type="text" id="number" class="form-control border border-light border-3" pattern="[0-9]{4}" required>
+                            <div class="invalid-feedback text-light">Nº inválido</div>
+                            <div class="valid-feedback text-light">Nº válido</div>
+                            <i class="bi-info-circle" data-bs-toggle="collapse" data-bs-target="#alerta5" style="color: white;">
+                                <div class="collapse" id="alerta5">
+                                    <p>O número deve conter 4 dígitos</p>
+                                </div>
+                            </i>
                         </div>
                         <div class="col-3">
                             <label for="" class="form-label text-light">Cidade:</label>
@@ -176,6 +188,11 @@
                             </datalist>
                             <div class="invalid-feedback text-light">Você deve informar a cidade</div>
                             <div class="valid-feedback text-light">Cidade válida</div>
+                            <i class="bi-info-circle" data-bs-toggle="collapse" data-bs-target="#alerta6" style="color: white;">
+                                <div class="collapse" id="alerta6">
+                                    <p>Deve ser uma das cidades da lista</p>
+                                </div>
+                            </i>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-outline-primary text-light">Cadastrar</button>
