@@ -12,8 +12,21 @@ else {
     document.getElementById('texto').innerHTML = "Quando você conquistar a maioridade, poderá se tornar um ninja de verdade!"
 }
 
+const tempLondon = [15, 8, 3, 12]
+tempLondon.push(-13)
 
-let valor1
+console.log(tempLondon)
+
+const tempPositive = tempLondon.every(function(value){
+    if(value >= 0)
+        document.getElementById("temperatura").innerHTML = "normal"
+    else
+        document.getElementById("temperatura").innerHTML = "abaixo da média"
+    return value
+})
+
+
+/*let valor1
 let valor2
 
 function somaValores(valor1, valor2) {
@@ -67,4 +80,4 @@ function CreateBook(title, author, pages) {
 }
 
 const book3 = new CreateBook("Black Lives Matter", "Pedro Henrique Brito", 500)
-console.log(book3)
+console.log(book3)*/
