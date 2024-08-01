@@ -1,7 +1,8 @@
-var nome = window.prompt('Digite seu nome')
+let nome = window.prompt('Digite seu nome')
 window.alert(`É um prazer te conhecer ${nome}`)
-var idade = Number(window.prompt('Digite sua idade:'))//Aqui, graças ao "Number", estou dizendo que 
+let idade = Number(window.prompt('Digite sua idade:'))//Aqui, graças ao "Number", estou dizendo que 
 //tudo que for digitado no prompt será convertido para número.
+let cla = window.prompt('Digite o nome do seu clã')
 
 document.getElementById('name').innerHTML = nome
 
@@ -12,13 +13,34 @@ else {
     document.getElementById('texto').innerHTML = "Quando você conquistar a maioridade, poderá se tornar um ninja de verdade!"
 }
 
+switch (cla) {
+    case "Uchiha", "uchiha", "UCHIHA":
+        document.getElementById("cla").innerHTML = "O clã Uchiha é um dos mais poderosos e influentes clãs de Konohagakure, conhecido por sua habilidade ocular única, o Sharingan. Descendentes de Indra Otsutsuki, o filho mais velho do Sábio dos Seis Caminhos, os Uchiha herdaram um chakra poderoso e habilidades espirituais excepcionais. Junto com o clã Senju, eles fundaram a Vila da Folha, mas a rivalidade entre os dois clãs persistiu ao longo dos anos2.O clã Uchiha quase foi extinto após o massacre liderado por Itachi Uchiha, que foi forçado a eliminar sua própria família para evitar uma guerra civil."
+            break;
+    case "Senju", "senju", "SENJU":
+        document.getElementById("cla").innerHTML = "O clã Senju é um dos mais poderosos e influentes de Konohagakure, conhecido por sua versatilidade em ninjutsu, taijutsu e genjutsu. Descendentes de Ashura Otsutsuki, eles herdaram a filosofia da “Vontade do Fogo”, que prega a importância do amor e da paz. Liderados por Hashirama Senju, o Primeiro Hokage, os Senju foram fundamentais na fundação de Konoha, firmando uma trégua histórica com o clã Uchiha."
+            break;
+    case "Hyuga", "huyga", "HYUGA":
+        document.getElementById("cla").innerHTML = "O clã Hyuuga é famoso por seu dojutsu, o Byakugan, que concede uma visão de 360 graus e a capacidade de ver o fluxo de chakra. Descendentes de Hamura Otsutsuki, o clã é dividido em duas famílias: a Principal e a Secundária. A Família Principal comanda o clã, enquanto a Secundária protege seus segredos, muitas vezes à custa de grande sacrifício pessoal."
+            break;
+    case "Inuzuka", "inuzuka", "INUZUKA":
+        document.getElementById("cla").innerHTML = "O clã Inuzuka é conhecido por sua estreita relação com cães ninjas, que são parceiros inseparáveis em combate. Os membros do clã possuem sentidos aguçados, especialmente o olfato, e utilizam técnicas de luta que combinam suas habilidades com as de seus cães. Eles são facilmente reconhecidos pelas marcas vermelhas de presas em suas bochechas."
+            break;
+    case "Aburame", "aburame", "ABURAME":
+        document.getElementById("cla").innerHTML = "O clã Aburame é caracterizado pelo uso de insetos como armas. Desde o nascimento, os membros do clã abrigam insetos em seus corpos, vivendo em simbiose com eles. Esses insetos se alimentam de chakra e obedecem às ordens de seus hospedeiros, tornando-os especialistas em espionagem e combate silencioso."
+            break;    
+    default:
+        "Ajude a transformar seu clã em um clã de renome, treine bastante e evolua como ninja, inspirando as novas gerações a batalharem com honra e ferocidade, sem piedade com os patifes e mafiosos."
+            break;
+    }
+
 const tempLondon = [15, 8, 3, 12]
 tempLondon.push(-13)
 
 console.log(tempLondon)
 
-const tempPositive = tempLondon.every(function(value){
-    if(value >= 0)
+const tempPositive = tempLondon.every(function (value) {
+    if (value >= 0)
         document.getElementById("temperatura").innerHTML = "normal"
     else
         document.getElementById("temperatura").innerHTML = "abaixo da média"
