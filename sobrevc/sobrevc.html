@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="sobrevc.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -25,8 +27,10 @@
                 <div class="navbar-nav ms-0 ms-sm-auto">
                     <a href="#" class="nav-link text-light col-3">Home</a>
                     <a href="/Form/form.html" class="nav-link text-light col-3 col-sm-5 text-sm-center">Formulário</a>
-                    <a href="#" class="nav-link text-light position-relative col-4 col-sm-5 col-md-5 ms-sm-0">Notificações
-                        <span class="badge text-bg-danger position-absolute top-5 top-sm-0 start-100 translate-middle rounded-pill">5</span>
+                    <a href="#"
+                        class="nav-link text-light position-relative col-4 col-sm-5 col-md-5 ms-sm-0">Notificações
+                        <span
+                            class="badge text-bg-danger position-absolute top-5 top-sm-0 start-100 translate-middle rounded-pill">5</span>
                     </a>
                 </div>
             </div>
@@ -39,19 +43,21 @@
                 Nome
                 Completo: </div>
             <div class="list-inline-item border border-1 rounded-1 p-2 my-2 ms-3 col-11 col-sm-12 col-lg-4 text-light">
-                Email:
+                Email: <span id="emailinfo"></span>
             </div>
             <div class="list-inline-item border border-1 rounded-1 p-2 my-2 ms-3 col-11 col-sm-12 col-lg-3 text-light">
-                Telefone: </div>
+                Telefone: <span id="telefoneinfo"></span></div>
             <div class="list-inline-item border border-1 rounded-1 p-2 my-2 ms-3 col-11 col-sm-12 col-lg-6 text-light">
-                Logradouro: </div>
-            <div class="list-inline-item border border-1 rounded-1 p-2 my-2 ms-3 col-2 col-sm-2 d-block d-sm-block d-md-inline-block col-lg-1 text-light">Nº:
+                Logradouro: <span id="logradouroinfo"></span></div>
+            <div
+                class="list-inline-item border border-1 rounded-1 p-2 my-2 ms-3 col-2 col-sm-2 d-block d-sm-block d-md-inline-block col-lg-1 text-light">
+                Nº: <span id="numberinfo"></span>
             </div>
             <div
                 class="list-inline-item border border-1 rounded-1 p-2 my-2 ms-3 ms-lg-3 col-11 col-sm-12 col-lg-3 text-light">
-                CPF: </div>
+                CPF: <span id="cpfinfo"></span></div>
             <div class="list-inline-item border border-1 rounded-1 p-2 my-2 ms-3 col-11 col-sm-12 col-lg-4 text-light">
-                Cidade:
+                Cidade: <span id="cidadeinfo"></span>
             </div>
             </ul>
         </div>
@@ -126,9 +132,39 @@
         </div>
     </div>
 
-    <footer class="p-3 text-light text-center sticky-bottom" style="background-color: #2604a1;">@Todos os direitos reservados</footer>
+    <footer class="p-3 text-light text-center sticky-bottom" style="background-color: #2604a1;">@Todos os direitos
+        reservados</footer>
 
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Form/form.js"></script>
+    <script>
+        $(document).ready(function() {
+            var email = localStorage.getItem("email");
+            if (email) {
+                $('#emailinfo').html(email);
+            }
+            var telefone = localStorage.getItem("phone");
+            if (telefone) {
+                $('#telefoneinfo').html(telefone);
+            }
+            var CPF = localStorage.getItem("cpf");
+            if (CPF) {
+                $('#cpfinfo').html(CPF);
+            }
+            var logradouro = localStorage.getItem("logradouro");
+            if (logradouro) {
+                $('#logradouroinfo').html(logradouro);
+            }
+            var numero = localStorage.getItem("numero");
+            if (numero) {
+                $('#numberinfo').html(numero);
+            }
+            var cidade = localStorage.getItem("cidade");
+            if (cidade) {
+                $('#cidadeinfo').html(cidade);
+            }
+        });
+    </script>
 </body>
 
 </html>
