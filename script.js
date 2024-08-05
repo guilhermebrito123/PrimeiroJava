@@ -48,6 +48,7 @@ const tempPositive = tempLondon.every(function (value) {
 })
 
 
+
 /*let valor1
 let valor2
 
