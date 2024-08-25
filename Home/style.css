@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to right, #2c05b9 0%, #401cc5 50%, #5338b6 100%);
+    background: linear-gradient(to right, #ffffff 0%, #d7d6da 50%, #b7b6b9 100%);
 }
 
 
@@ -24,10 +24,5 @@ li {
 .h300 {
     max-height: 450px;  
     font-family: fantasy;
-}
-
-img {
-    max-width: 40px;
-    max-height: 40px;
 }
 
